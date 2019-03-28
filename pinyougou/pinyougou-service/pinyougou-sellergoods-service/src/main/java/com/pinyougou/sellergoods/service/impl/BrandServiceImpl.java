@@ -30,7 +30,6 @@ public class BrandServiceImpl implements BrandService {
                 brandMapper.selectAll();
             }
         });
-        System.out.println("好好");
         System.out.println("总记录数"+pageInfo.getTotal());
         System.out.println("总页数"+pageInfo.getPages());
         return pageInfo.getList();
