@@ -23,6 +23,7 @@ public class BrandController {
     /** 查询全部品牌 */
     @GetMapping("/brand/findAll")
     public List<Brand> findAll(){
+        System.out.println("qqqq");
         return brandService.findAll();
     }
 }
