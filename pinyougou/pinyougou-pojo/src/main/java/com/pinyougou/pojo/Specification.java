@@ -23,7 +23,7 @@ public class Specification implements Serializable{
 	/** 规格名称 */
 	@Column(name="spec_name")
     private String specName;
-    /** 规格属性集合 */
+    /** 规格属性集合 @Transient:通用Mapper不会把该属性作为表中的列 */
 	@Transient
     private List<SpecificationOption> specificationOptions; 
     
@@ -40,6 +40,7 @@ public class Specification implements Serializable{
     public void setSpecName(String specName) {
         this.specName = specName == null ? null : specName.trim();
     }
+
 	public List<SpecificationOption> getSpecificationOptions() {
 		return specificationOptions;
 	}
